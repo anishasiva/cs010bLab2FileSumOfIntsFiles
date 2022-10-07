@@ -34,7 +34,7 @@ int fileSum (string numFile)  {
    inputs.open(numFile);
 
    if (!inputs.is_open()) {
-      cout << "Could not open file numFile" << endl;
+      cout << "Error opening " << numFile << endl;
       exit(1);
 
    }
