@@ -5,6 +5,8 @@
 using namespace std;
 
 // Place fileSum prototype (declaration) here
+int fileSum (string numFile);
+
 
 int main() {
 
@@ -23,3 +25,23 @@ int main() {
 }
 
 // Place fileSum implementation here
+int fileSum (string numFile)  {
+   ifstream inputs;   // Input file stream
+   int num = 0; 
+   int total = 0;   // File data
+
+   // Open file
+   inputs.open(numFile);
+
+   if (!inputs.is_open()) {
+      cout << "Could not open file numFile" << endl;
+      return 1;
+
+   }
+       
+   
+   while (inputs >> num) {
+      total = total + num;
+   }
+   return total;
+}
